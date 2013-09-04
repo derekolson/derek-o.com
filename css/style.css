@@ -50,7 +50,7 @@ table {
   border-spacing: 0; }*/
 
 
-/* Base
+/* Base Selectors
 -------------------------------------------------- */
 body {
   font: 16px/1.9 'Lekton', sans-serif;
@@ -113,17 +113,27 @@ ul {
 
 /* Typography
 -------------------------------------------------- */
-h1, h2, h3, h4, h5, h6 { font-family: 'Oswald', sans-serif; font-weight: 300; text-transform: uppercase;}
-h1 { font-size: 36px; text-align: center;}
-h2 { font-size: 20px; }
-h3 {}
-h4 {}
+h1, h2, h3, h4, h5, h6 { 
+  font-family: 'Oswald', sans-serif; 
+  font-weight: 300; 
+  text-transform: uppercase; 
+  text-align: center;
+}
 
-p { margin: 0 0 2em 0; }
+h1 { font-size: 36px; }
+h2 { font-size: 20px; }
+h3 { font-size: 16px; }
+
+p { margin: 0 auto 30px; }
 
 /* Header
 -------------------------------------------------- */
 header {
+}
+
+.tagline {
+  padding: 0 0 30px;
+  text-align: center;
 }
 
 /* About
@@ -133,10 +143,11 @@ header {
 /* Projects
 -------------------------------------------------- */
 .project {
+  padding: 0 0 30px;
+  /*border-top: 1px dotted #70705F;*/
 }
 
 .project h2 {
-  /*text-align: center;*/
 }
 
 .project p {
@@ -171,11 +182,13 @@ footer {
 /* Media Queries
 -------------------------------------------------- */
 @media (min-width: 768px) {
-/*  .project p{
+  .tagline {
     width: 690px;
-    text-align: justify;
-    margin: 0 auto 2em;
-  }*/
+  }
+
+  .project p{
+    width: 690px;
+  }
 }
 
  
