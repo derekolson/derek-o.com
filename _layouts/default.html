@@ -1,32 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="description" content="{{site.description}}">
-  <meta name="author" content="{{site.name}}">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <title> {% if page.title %} {{ page.title }} | {% endif %}{{site.name}}</title>
-
-  <link href='http://fonts.googleapis.com/css?family=Lekton|Oswald:300' rel='stylesheet' type='text/css'>
-  
-  <link rel="stylesheet" href="/css/style.css">
-
-  <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
-</head>
-<body>
-  <div class="container">
- 
-    <header>
+{% include header.html %}
+  <header>
+    <div class="container">
       <h1>Derek Olson</h1>
-    </header>
- 
-    {{ content }}
+      <p class="tagline">
+        I am a hybrid <strong>developer</strong> and <strong>tinkerer</strong>.<br/>I design and build engaging interactive experiences.
+      </p>
+      <a href="#about" class="button">ABOUT ME</a>
+    </div>
+  </header>
 
-    <footer>
-      <p>&copy; Derek Olson 2013 | All Rights Reserved. </p>
-    </footer>
-  </div>
-</body>
-</html>
+  {{ content }}
+
+{% include footer.html %}

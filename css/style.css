@@ -1,53 +1,10 @@
 /* Reset
 -------------------------------------------------- */
-article,aside,details,figcaption,figure,footer,header,hgroup,nav,section {display: block;}
+/*article,aside,details,figcaption,figure,footer,header,hgroup,nav,section {display: block;}
 html {font-size: 100%;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;}
 a:focus {outline: thin dotted #333;outline: 5px auto -webkit-focus-ring-color;outline-offset: -2px;}
 a:hover,a:active {outline: 0;}
-img {max-width: 100%;vertical-align: middle;border: 0;-ms-interpolation-mode: bicubic;}
-
-/*html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline; }
-
-/* HTML5 display-role reset for older browsers */
-/*article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block; }
-
-body {
-  line-height: 1; }
-
-ol, ul {
-  list-style: none; }
-
-blockquote, q {
-  quotes: none; }
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none; }
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }*/
+img {max-width: 100%;vertical-align: middle;border: 0;-ms-interpolation-mode: bicubic;}*/
 
 
 /* Base Selectors
@@ -81,12 +38,13 @@ ul {
   padding: 0;
 }
 
-/* Grid
+/* Container & Grid
 -------------------------------------------------- */
 .container { width: 90%; max-width: 960px; margin: 0 auto; *zoom: 1; }
 .container:before,.container:after { display: table;content: ""; }
 .container:after { clear: both; }
 
+/*
 .row { width: 100%; *zoom: 1; }
 .row:before,.row:after { display: table; content: ""; }
 .row:after { clear: both; }
@@ -107,9 +65,9 @@ ul {
 .row [class*="span"]:first-child {margin-left: 0;}
 
 .row .span6 {width: 99.99999998999999%;}
-.row .span4 {width: 65.51724137931035%%;}
+.row .span4 {width: 65.51724137931035%;}
 .row .span3 {width: 48.93617020799999%;}
-.row .span2 {width: 31.914893614%;}
+.row .span2 {width: 31.914893614%;}*/
 
 /* Typography
 -------------------------------------------------- */
@@ -120,15 +78,42 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 
+h1 a {
+  color: #000;
+}
+
 h1 { font-size: 36px; }
 h2 { font-size: 20px; }
 h3 { font-size: 16px; }
 
 p { margin: 0 auto 30px; }
+br { padding-bottom: 30px; }
 
 /* Header
 -------------------------------------------------- */
 header {
+  padding: 50px 0;
+
+  background: #000;
+  background-image: url("../img/header.gif");
+  background-size: 100% 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  color: #fff;
+
+  margin-bottom: 20px;
+}
+
+header h1 {
+  width: 298px;
+  height: 62px;
+  background-size: 298px 62px;
+  background-image: url("../img/logo-white.png");
+  margin-left: auto;
+  margin-right: auto;
+  text-indent: -9999px;
 }
 
 .tagline {
@@ -136,18 +121,25 @@ header {
   text-align: center;
 }
 
-/* About
--------------------------------------------------- */
-
 
 /* Projects
 -------------------------------------------------- */
-.project {
-  padding: 0 0 30px;
-  /*border-top: 1px dotted #70705F;*/
+.project, #about {
+  background: url("../img/section-marker.png") no-repeat top center;
+  background-size: 259px 11px;
+  padding: 30px 0 30px;
+}
+
+.project img, .videoWrapper {
+  box-shadow: 0px 0px 5px #70705F;
 }
 
 .project h2 {
+
+}
+
+.project h2 a {
+  color: #000;
 }
 
 .project p {
@@ -155,10 +147,37 @@ header {
 }
 
 
+/*.project.ccc {
+  background: rgb(185, 151, 165);
+}
+.project.ccc h2 a{
+}
+
+.project.spinart {
+  color: #fff;
+  background: rgb(170, 88, 120);
+}
+.project.spinart h2 a{
+  color: #fff;
+}
+
+.project.project32 {
+  color: #fff;
+  background: rgb(50, 50, 82);
+  background: rgb(118, 110, 152);
+}
+.project.project32 h2 a{
+  color: #fff;
+}*/
+
+
+
 .videoWrapper {
   position: relative;
   padding-bottom: 56.25%; /* 16:9 */
   margin-bottom: 10px;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
 }
 
 .videoWrapper.ratio4x3 {
@@ -173,10 +192,75 @@ header {
   height: 100%;
 }
 
+.play-button {
+    height: 40px;
+    width: 65px;    
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-top: -20px;
+    margin-left: -32px;
+}
+
+.play-button:hover {
+    background-color: rgba(0, 173, 239, 0.9);
+}
+
+.play-button:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 10.5px;
+    left: 24px;
+    margin: 0 auto;
+    border-style: solid;
+    border-width: 9.5px 0 9.5px 17px;
+    border-color: transparent transparent transparent rgba(255, 255, 255, 1);
+}
+
+.button {
+  background: #FF6633; /*rgba(255, 102, 51, 0.7)*/
+  color: #FFFFFF;
+  display: block;
+  width: 200px;
+  margin: 0 auto;
+  padding: 10px;
+
+  -webkit-border-radius: 4px;
+   -moz-border-radius: 4px;
+   border-radius: 4px;
+
+  font-family: 'Oswald', sans-serif; 
+  font-weight: 300; 
+  font-size: 16px;
+  text-transform: uppercase; 
+  text-align: center;
+}
+
+.button:hover {
+  text-decoration: none;
+  background: #ff561e;
+}
+
+/* About
+-------------------------------------------------- */
+/*#about {
+  color: #fff;
+  background-color: rgb(50, 50, 82);
+  background-color: rgb(118, 110, 152);
+}
+#about a {
+  color: #fff;
+}*/
+
 /* Footer
 -------------------------------------------------- */
 footer {
+  padding: 30px 0;
   text-align: center;
+  font-size: 14px;
 }
 
 /* Media Queries
@@ -186,9 +270,18 @@ footer {
     width: 690px;
   }
 
-  .project p{
+  .project p, #about p{
     width: 690px;
   }
 }
 
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+  header h1 {
+    background-image: url("../img/logo-white-2x.png");
+  }
+
+  .project {
+    background-image: url("../img/section-marker-2x.png");
+  }
+} 
  

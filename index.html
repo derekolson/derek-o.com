@@ -1,16 +1,34 @@
 ---
 layout: default
 ---
-  <p class="tagline">I am a hybrid <strong>developer</strong> and <strong>tinkerer</strong>. 
-  	<br/>I design, develop, and build engaging <a href="#">interactive experiences.</a>
-  	<br/><br/>
-  	More Coming Soon!
-  </p>
 
+<!-- <h3>Featured Work</h3> -->
+{% for project in site.categories.projects %}
+<div class="project {{project.class}}" >
+	<div class="container">
+		<h2><a href="{{ project.url }}">{{ project.title }}</a></h2>
+		{{ project.content }}
+	</div>
+</div>
+{% endfor %}
 
-
-<!--   {% for project in site.categories.projects %}
-  <div class="project" >
-  	{{ project.content }}
-  </div>
-  {% endfor %} -->
+<a name="about">&nbsp;</a>
+<div id="about">
+	<div class="container">
+		<h2>About Me</h2>
+		<p>I am a <strong>creative thinker</strong> who is driven by unique and challenging problems.
+			I am a <strong>nimble coder</strong> who strives for simple and elegant solutions.
+			I am a <strong>playful tinkerer</strong> who has an appreciation for great design.
+			<em>My purpose is to fuse art and design with electronics, code, sensors, wires and solder.</em>
+		</p>
+		<p>
+			Over the last five years, I have been recruited to produce work for outstanding digital shops around Chicago. In my downtime, I aspire to create magic by joining forces with kick-ass artists, designers and developers throughout the midwest. I am always seeking new challenges and collaborations.
+		</p>
+		<p>
+			You can find me elsewhere on the web: follow me on <a href="https://twitter.com/derekmolson">Twitter</a>, browse my open-source code on <a href="https://github.com/derekolson">GitHub</a>, and see my professional network on <a href="http://www.linkedin.com/in/derekmolson">LinkedIn.</a>
+		</p>
+		
+		<span id="obf"><script>document.getElementById("obf").innerHTML="<n pynff=\"ohggba\" uers=\"znvygb:qrerx@qrerx-b.pbz\">Trg Va Gbhpu</n>".replace(/[a-zA-Z]/g,function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);});</script>
+		</span>
+	</div>
+</div>
