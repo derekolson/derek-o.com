@@ -87,7 +87,7 @@ h2 { font-size: 20px; }
 h3 { font-size: 16px; }
 
 p { margin: 0 auto 30px; }
-br { padding-bottom: 30px; }
+strong { font-weight: 700; }
 
 /* Header
 -------------------------------------------------- */
