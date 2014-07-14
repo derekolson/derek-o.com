@@ -21,7 +21,7 @@ a {
   color: #FF6633;
   text-decoration: none;
 }
- 
+
 a:hover {
   text-decoration: underline;
 }
@@ -29,7 +29,6 @@ a:hover {
 img {
   width: 100%;
   height: auto;
-  /*float: left;*/
   margin-bottom: 10px;
 }
 
@@ -127,9 +126,9 @@ header h1 {
 /* Projects
 -------------------------------------------------- */
 .project, #about {
-  background: url("../img/section-marker.png") no-repeat top center;
+  background: url("../img/section-marker.png") no-repeat 50% 20px;
   background-size: 259px 11px;
-  padding: 30px 0 30px;
+  padding: 50px 0 30px;
 }
 
 .project img, .videoWrapper {
@@ -150,14 +149,14 @@ header h1 {
 
 
 /*.project.ccc {
-  background: rgb(185, 151, 165);
+  background-color: rgb(185, 151, 165);
 }
 .project.ccc h2 a{
 }
 
 .project.spinart {
   color: #fff;
-  background: rgb(170, 88, 120);
+  background-color: rgb(170, 88, 120);
 }
 .project.spinart h2 a{
   color: #fff;
@@ -165,8 +164,8 @@ header h1 {
 
 .project.project32 {
   color: #fff;
-  background: rgb(50, 50, 82);
-  background: rgb(118, 110, 152);
+  background-color: rgb(50, 50, 82);
+  background-color: rgb(118, 110, 152);
 }
 .project.project32 h2 a{
   color: #fff;
