@@ -281,7 +281,7 @@ footer {
   }
 }
 
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dppx) { 
   header h1 {
     background-image: url("../img/logo-white-2x.png");
   }
