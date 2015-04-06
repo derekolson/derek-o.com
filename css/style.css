@@ -210,7 +210,7 @@ header h1 {
     margin-left: -32px;
 }
 
-.play-button:hover, .play-button.hover {
+.videoWrapper:hover .play-button {
     background-color: rgba(0, 173, 239, 0.9);
 }
 
