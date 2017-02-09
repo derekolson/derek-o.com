@@ -7,7 +7,7 @@ function init() {
         var videoWrapper = $(this);
 
         $.ajax({
-            url: 'http://vimeo.com/api/v2/video/' + videoWrapper.data('vimeoid') + '.json',
+            url: '//vimeo.com/api/v2/video/' + videoWrapper.data('vimeoid') + '.json',
             dataType: 'jsonp',
             type: 'GET',
             success: function(response, success){
