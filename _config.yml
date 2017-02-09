@@ -4,3 +4,5 @@ url: "http://www.derek-o.com"
 
 permalink: /:categories/:title/
 markdown: kramdown
+
+exclude: [README.md, Gemfile, Gemfile.lock, firebase.json]
