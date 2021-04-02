@@ -1,8 +1,12 @@
 name: "Derek Olson"
-description: "Derek Olson - Creative Coder"
-url: "http://www.derek-o.com"
+description: "Software Designer and Developer"
+url: "https://www.derek-o.com"
 
 permalink: /:categories/:title/
 markdown: kramdown
 
-exclude: [README.md, Gemfile, Gemfile.lock, firebase.json]
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude: [README.md, Gemfile, Gemfile.lock]

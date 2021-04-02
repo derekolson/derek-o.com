@@ -10,7 +10,7 @@ img {max-width: 100%;vertical-align: middle;border: 0;-ms-interpolation-mode: bi
 /* Base Selectors
 -------------------------------------------------- */
 body {
-  font: 16px/1.9 'Lekton', sans-serif;
+  font: 17px/1.8 "Lekton", "Courier New", sans-serif;
   background: #F4F1EA;
   color: #000;
   margin: 0;
@@ -18,7 +18,7 @@ body {
 }
 
 a {
-  color: #FF6633;
+  color: #FF4000;
   text-decoration: none;
 }
 
@@ -88,6 +88,7 @@ h3 { font-size: 16px; }
 p { 
   margin: 0 auto 30px;
   padding: 0 20px;
+  max-width: 690px;
 }
 strong { font-weight: 700; }
 
@@ -113,7 +114,7 @@ header h1 {
   height: 62px;
   background-image: url("../img/logo-white.png");
   background-size: 298px 62px;
-  background-position: top left;
+  background-position: center;
   background-repeat: no-repeat;
   margin-left: auto;
   margin-right: auto;
@@ -138,43 +139,9 @@ header h1 {
   box-shadow: 0px 0px 5px #70705F;
 }
 
-.project h2 {
-
-}
-
 .project h2 a {
   color: #000;
 }
-
-.project p {
-
-}
-
-
-/*.project.ccc {
-  background-color: rgb(185, 151, 165);
-}
-.project.ccc h2 a{
-}
-
-.project.spinart {
-  color: #fff;
-  background-color: rgb(170, 88, 120);
-}
-.project.spinart h2 a{
-  color: #fff;
-}
-
-.project.project32 {
-  color: #fff;
-  background-color: rgb(50, 50, 82);
-  background-color: rgb(118, 110, 152);
-}
-.project.project32 h2 a{
-  color: #fff;
-}*/
-
-
 
 .videoWrapper {
   position: relative;
@@ -227,7 +194,7 @@ header h1 {
 }
 
 .button {
-  background: #FF6633; /*rgba(255, 102, 51, 0.7)*/
+  background: #232323;
   color: #FFFFFF;
   display: block;
   width: 200px;
@@ -238,7 +205,7 @@ header h1 {
    -moz-border-radius: 4px;
    border-radius: 4px;
 
-  font-family: 'Oswald', sans-serif; 
+  font-family: "Oswald", sans-serif; 
   font-weight: 300; 
   font-size: 16px;
   text-transform: uppercase; 
@@ -247,19 +214,11 @@ header h1 {
 
 .button:hover {
   text-decoration: none;
-  background: #ff561e;
+  background: #ff4000;
 }
 
 /* About
 -------------------------------------------------- */
-/*#about {
-  color: #fff;
-  background-color: rgb(50, 50, 82);
-  background-color: rgb(118, 110, 152);
-}
-#about a {
-  color: #fff;
-}*/
 
 /* Footer
 -------------------------------------------------- */
@@ -271,16 +230,6 @@ footer {
 
 /* Media Queries
 -------------------------------------------------- */
-@media (min-width: 768px) {
-  .tagline {
-    width: 690px;
-  }
-
-  .project p, #about p{
-    width: 690px;
-  }
-}
-
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dppx) { 
   header h1 {
     background-image: url("../img/logo-white-2x.png");
