@@ -16,7 +16,7 @@ class Vimeo < Liquid::Tag
   end
 
   def render(context)
-    "<div class=\"videoWrapper\" data-id=\"#{@id}\" style=\"background-image: url(#{@thumbnail});\"><div class=\"play-button\"></div></div>"
+    "<div class=\"videoWrapper lazy\" data-id=\"#{@id}\" data-bg=\"#{@thumbnail}\"><div class=\"play-button\"></div></div>"
   end
   Liquid::Template.register_tag("vimeo", self)
 end
