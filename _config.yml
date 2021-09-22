@@ -1,6 +1,10 @@
 name: "Derek Olson"
 tagline: "Software Designer and Developer"
-description: "Derek Olson is a software design lead at IDEO's Chicago studio, helping to dream up and prototype new products and experiences for companies around the world."
+description: >
+  Derek Olson is a software designer and developer with a background in art, music, and electronics.
+  As a design lead at <a href="https://www.ideo.com">IDEO</a>,
+  he collaborates with organizations around the world to create cutting-edge, 
+  human-centered products and experiences.
 url: "https://www.derek-o.com"
 logo: "/img/logo-white-2x.png"
 

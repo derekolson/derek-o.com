@@ -2,18 +2,12 @@
 <html lang="en">
 {% include head.html %}
 <body>
-  <header>
-    <h1>Derek Olson</h1>
+  {% include nav.html %}
+  <main>
     <div class="container">
-      <p class="tagline">
-        <strong>software designer</strong> and <strong>developer</strong><br/>I design and build unique interactive experiences.
-      </p>
-      <a href="#about" class="button">ABOUT ME</a>
+    {{ content }}
     </div>
-  </header>
-
-  {{ content }}
-
+  </main>
 {% include footer.html %}
 </body>
 </html>

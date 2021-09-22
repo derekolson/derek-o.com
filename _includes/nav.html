@@ -1,0 +1,13 @@
+{% assign filtered_pages = site.pages | where_exp: "page", "page.nav_order", | sort: "nav_order" %}
+<header>
+  <nav id="nav" class="container">
+    <h1 class="logo"><a href="/">Derek Olson</a></h1>
+    <ul>
+      {% for item in filtered_pages %}
+        <li>
+          <a href="{{item.url}}" class="{% if item.url == page.url %}active{% endif %}">{{item.nav_title | default: item.title}}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</header>

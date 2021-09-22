@@ -1,3 +1,6 @@
-<picture>
+<figure style="background-color: {{include.overlay | default: '#eee'}};">
   <img class="lazy" data-src="{{ include.src }}" alt="{{ include.alt }}" />
-</picture>
+  {% if include.caption %}
+  <figcaption>{{include.caption}}</figcaption>
+  {% endif %}
+</figure>

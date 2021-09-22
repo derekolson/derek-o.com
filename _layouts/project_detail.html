@@ -2,16 +2,25 @@
 <html lang="en">
 {% include head.html %}
 <body>
-  <header>
-      <a href="/"><h1>Derek Olson</h1></a>
-  </header>
-
-  <div class="project" >
+  {% include nav.html %}
+  <main>
     <div class="container">
-      <h2>{{ page.title }}</h2>
+      <div class="description">
+        <h2>{{ page.title }}</h2>
+        <h3>{{ page.description }}</h3>
+        <p class="tags"><em>{{ page.tags | join: ", "}}</em></p>
+      </div>
       {{ content }}
+      <nav class="pagination">
+        {% if page.next.url %}
+          <a class="next" href="{{page.next.url}}">&laquo; {{page.next.title}}</a>
+        {% endif %}
+        {% if page.previous.url %}
+          <a class="prev" href="{{page.previous.url}}">{{page.previous.title}} &raquo;</a>
+        {% endif %}
+      </div>
     </div>
-  </div>
+  </main>
 {% include footer.html %}
 </body>
 </html>

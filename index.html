@@ -1,43 +1,22 @@
 ---
 layout: default
 image: /img/faceslitscan-blur.jpg
+nav_title: Home
+nav_order: 1
 ---
-
-{% for project in site.categories.projects %}
-<div class="project {{project.class}}" >
-	<div class="container">
-		<h2><a href="{{ project.url }}">{{ project.title }}</a></h2>
-		{{ project.content }}
-	</div>
+<div class="description">
+	<h2>
+		{{ site.description }}
+	</h2>
 </div>
-{% endfor %}
 
-<a name="about">&nbsp;</a>
-<div id="about">
-	<div class="container">
-		<h2>About Me</h2>
-		<p>
-			I am a software designer and developer who is fueled by unique and challenging 
-			problems. I aim to fuse art and design with electronics, code, sensors, wires, 
-			and solder.
-		</p>
-		<p>
-			Over the last twelve years, I have been recruited to produce work for outstanding 
-			digital shops around Chicago. I currently work as a software design lead at 
-			<a href="https://www.ideo.com/">IDEO</a>, helping to dream up and prototype new 
-			products and experiences for companies around the world. 
-			In my downtime, I aspire to create magic by joining forces with amazing artists, 
-			designers, and developers throughout the country.
-			I am always seeking new challenges and collaborations.
-		</p>
-		<p>
-			You can find me elsewhere on the web: 
-			follow me on <a href="https://twitter.com/derekmolson">Twitter</a>, 
-			browse my open-source code on <a href="https://github.com/derekolson">GitHub</a>, 
-			and see my professional network on <a href="https://www.linkedin.com/in/derekmolson">LinkedIn.</a>
-		</p>
-		
-		<span id="obf"><script>document.getElementById("obf").innerHTML="<n pynff=\"ohggba\" uers=\"znvygb:qrerx@qrerx-b.pbz\">Trg Va Gbhpu</n>".replace(/[a-zA-Z]/g,function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);});</script>
-		</span>
+<div class="projects">
+	{% for project in site.categories.projects %}
+	<div class="project {{project.title | slugify}}">
+		<a href="{{ project.url }}">
+			{% include image.html src=project.image overlay=project.color %}
+			<h2>{{ project.title }}</h2>
+		</a>
 	</div>
+	{% endfor %}
 </div>
