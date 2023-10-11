@@ -3,11 +3,38 @@
 
 /* Reset
 -------------------------------------------------- */
-article,aside,details,figcaption,figure,footer,header,hgroup,nav,section {display: block;}
-html {font-size: 100%;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;}
-a:focus {outline: thin dotted #333;outline: 5px auto -webkit-focus-ring-color;outline-offset: -2px;}
-a:hover,a:active {outline: 0;}
-img {max-width: 100%;vertical-align: middle;border: 0;-ms-interpolation-mode: bicubic;}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+  display: block;
+}
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+a:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+a:hover,
+a:active {
+  outline: 0;
+}
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
 
 
 /* Base Selectors
@@ -18,23 +45,27 @@ $screen-lg: 1200px;
 $screen-xl: 1600px;
 
 $spacing: 30px;
+$font-body: "Source Sans Pro", Helvetica, sans-serif;
+$font-heading: "Source Sans Pro", Helvetica, sans-serif;
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   background: #fff;
   color: #000;
 }
 
-html, body {
-  font-family: "Source Sans Pro", "Helvetica", sans-serif;
+html,
+body {
+  font-family: $font-body;
   font-size: 20px;
   line-height: 1.6;
   font-weight: 300;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: subpixel-antialiased;
 
-  @media screen and (min-width:$screen-sm){
+  @media screen and (min-width: $screen-sm) {
     font-size: 20px;
   }
 
@@ -48,11 +79,11 @@ html, body {
 }
 
 a {
-  color: #FF4000;
+  color: #ff4000;
   text-decoration: none;
 
   &:hover {
-    text-decoration: underline;
+    border-bottom: 1px solid;
   }
 }
 
@@ -83,12 +114,12 @@ ul {
 
 /* Container & Grid
 -------------------------------------------------- */
-.container { 
+.container {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 20px;
 
-  @media screen and (min-width:$screen-sm){
+  @media screen and (min-width: $screen-sm) {
     padding: 0 80px;
   }
 }
@@ -120,21 +151,34 @@ ul {
 
 /* Typography
 -------------------------------------------------- */
-h1, h2, h3, h4, h5, h6 { 
-  font-family: "Source Sans Pro", "Helvetica", sans-serif; 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-body;
   font-weight: 300;
-  color: #444;
+  color: #444444;
 }
 
-h1 { font-size: 1.8rem; }
-h2 { font-size: 1.2rem; }
-h3 { font-size: 1rem; }
+h1 {
+  font-size: 1.8rem;
+}
+h2 {
+  font-size: 1.2rem;
+}
+h3 {
+  font-size: 1rem;
+}
 
-p { 
+p {
   margin-bottom: $spacing;
   max-width: 660px;
 }
-strong { font-weight: 700; }
+strong {
+  font-weight: 700;
+}
 
 /* Header
 -------------------------------------------------- */
@@ -144,8 +188,9 @@ header {
 
 header .logo {
   margin: 0;
-  font-size: 1.1rem;
-  font-weight: 400;
+  font-size: 0.9rem;
+  font-family: $font-heading;
+  // font-weight: 400;
   // background: url(/img/do-logo.svg) no-repeat left;
   // background-size: 26px 26px;
   // padding-left: 35px;
@@ -168,10 +213,12 @@ header .logo {
     margin-left: 30px;
 
     a {
-      font-size: 1rem;
+      font-family: $font-heading;
+      font-size: 0.9rem;
       color: #999;
-      &:hover, &.active {
-        color: #000;
+      &:hover,
+      &.active {
+        color: #444;
       }
     }
   }
@@ -179,7 +226,7 @@ header .logo {
 
 .description {
   padding: 80px 0;
-  line-height: 1.4;
+  line-height: 1.5;
   max-width: 660px;
 
   h2 {
@@ -200,7 +247,6 @@ header .logo {
   }
 }
 
-
 /* Projects
 -------------------------------------------------- */
 .project {
@@ -217,7 +263,7 @@ header .logo {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      transition: opacity 0.25s ease;
+      transition: opacity 0.2s ease;
     }
   }
 
@@ -228,7 +274,8 @@ header .logo {
   }
 
   &:hover {
-    h2, img {
+    h2,
+    img {
       opacity: 0.5;
     }
   }
@@ -239,7 +286,7 @@ header .logo {
   transform: translateX(-100%);
 }
 
-.videoWrapper {
+.video-wrapper {
   position: relative;
   padding-bottom: 56.25%; /* 16:9 */
   margin-bottom: 10px;
@@ -249,11 +296,11 @@ header .logo {
   overflow: hidden;
 }
 
-.videoWrapper.ratio4x3 {
+.video-wrapper.ratio4x3 {
   padding-bottom: 75%; /* 4:3 */
 }
 
-.videoWrapper iframe {
+.video-wrapper iframe {
   position: absolute;
   top: 0;
   left: 0;
@@ -262,46 +309,46 @@ header .logo {
 }
 
 .play-button {
-    height: 40px;
-    width: 65px;    
-    background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 5px;
-    position: absolute;
-    top:50%;
-    left:50%;
-    margin-top: -20px;
-    margin-left: -32px;
+  height: 40px;
+  width: 65px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -20px;
+  margin-left: -32px;
 }
 
-.videoWrapper:hover .play-button {
-    background-color: rgba(0, 173, 239, 0.9);
+.video-wrapper:hover .play-button {
+  background-color: rgba(0, 173, 239, 0.9);
 }
 
 .play-button:after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 10.5px;
-    left: 24px;
-    margin: 0 auto;
-    border-style: solid;
-    border-width: 9.5px 0 9.5px 17px;
-    border-color: transparent transparent transparent rgba(255, 255, 255, 1);
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10.5px;
+  left: 24px;
+  margin: 0 auto;
+  border-style: solid;
+  border-width: 9.5px 0 9.5px 17px;
+  border-color: transparent transparent transparent rgba(255, 255, 255, 1);
 }
 
 .button {
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   display: block;
   width: 200px;
   margin: 0 auto;
   padding: 10px;
   border-radius: 4px;
 
-  font-family: "Source Sans Pro", sans-serif; 
+  font-family: $font-body;
   font-weight: 300;
   font-size: 16px;
-  text-transform: uppercase; 
+  text-transform: uppercase;
   text-align: center;
 }
 
