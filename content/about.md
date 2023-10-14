@@ -2,6 +2,9 @@
 title: About
 layout: default
 nav_order: 2
+eleventyNavigation:
+  title: "About"
+  order: 2
 ---
 Derek Olson is a software designer and developer who thrives in the spaces between creativity and technology.
 He aims to fuse art and design with electronics, code, sensors, wires, 

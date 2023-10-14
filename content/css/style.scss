@@ -1,6 +1,3 @@
----
----
-
 /* Reset
 -------------------------------------------------- */
 article,
@@ -87,7 +84,9 @@ a {
   }
 }
 
-figure {
+figure,
+picture {
+  display: block;
   margin: 0 0 10px;
 }
 

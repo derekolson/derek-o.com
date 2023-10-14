@@ -1,7 +1,7 @@
 ---
 layout: project_detail
 title: Hyperhuman
-image: /img/projects/hyperhuman-hero.jpg
+image: img/projects/hyperhuman-hero.jpg
 color: "#fcdd2b"
 link: https://www.ideo.com/blog/what-the-ai-products-of-tomorrow-might-look-like
 description: >
@@ -12,6 +12,5 @@ tags:
   - Simulation
 ---
 
-{% include image.html src="/img/projects/hyperhuman-hero.jpg" %}
-
-{% include image.html src="/img/projects/hyperhuman-2.png" %}
+{% image "img/projects/hyperhuman-hero.jpg" "" %}
+{% image "img/projects/hyperhuman-2.png" "" %}

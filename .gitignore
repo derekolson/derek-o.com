@@ -11,3 +11,6 @@ Thumbs.db
 
 .jekyll-cache
 .jekyll-metadata
+
+.cache
+node_modules
