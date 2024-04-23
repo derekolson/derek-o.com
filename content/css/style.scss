@@ -49,8 +49,16 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background: #fff;
+  background: rgb(252, 253, 253); //rgb(244 244 245);
   color: #000;
+  // --dot-bg: white;
+  // --dot-color: rgb(0,0,0,0.15);
+  // --dot-size: 1px;
+  // --dot-space: 20px;
+	// background:
+	// 	linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+	// 	linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+	// 	var(--dot-color);
 }
 
 html,
@@ -218,6 +226,10 @@ header .logo {
       &:hover,
       &.active {
         color: #444;
+        border-color: transparent;
+      }
+      &.active {
+        border-bottom: 1px solid;
       }
     }
   }

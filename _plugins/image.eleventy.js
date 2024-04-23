@@ -21,12 +21,18 @@ module.exports = eleventyConfig => {
 
         let imageAttributes = {
             alt,
-            style: `background-color: ${overlay};`,
             sizes,
             loading: "lazy",
             decoding: "async",
         };
 
-        return eleventyImage.generateHTML(metadata, imageAttributes, { whitespaceMode: "block" });
+        let options = {
+            pictureAttributes: {
+                style: `background-color: ${overlay};`,
+            },
+            whitespaceMode: "block"
+        }
+
+        return eleventyImage.generateHTML(metadata, imageAttributes, options);
     });
 };
