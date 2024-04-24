@@ -1,0 +1,29 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { site } from '../config';
+
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
+
+const projects = await getCollection("projects");
+
+---
+
+<Layout title={`${site.name} | ${site.tagline}`}>
+	<div class="description">
+		<h2>{ site.description }</h2>
+		<a href="/about">About →</a>
+	</div>
+	<div class="projects">
+		{ projects.toReversed().map((project) => (
+			<div class={`project ${project.slug}`}>
+				<a href={ `/${project.collection}/${project.slug}`}>
+					<figure style={{ backgroundColor: project.data.color }}>
+						<Image src={project.data.cover} alt={project.data.coverAlt} />
+					</figure>
+					<h2>{ project.data.title }</h2>
+				</a>
+			</div>
+		))}
+	</div>
+</Layout>

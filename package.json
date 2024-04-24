@@ -1,12 +1,14 @@
 {
   "name": "derek-o.com",
+  "type": "module",
   "version": "1.0.0",
   "description": "Portfolio website for Derek Olson",
-  "main": "index.js",
   "scripts": {
-    "clean": "rm -rf ./_site",
-    "build": "npm run clean && eleventy",
-    "dev": "eleventy --serve --watch"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "repository": {
     "type": "git",
@@ -18,11 +20,13 @@
     "url": "https://github.com/derekolson/derek-o.com/issues"
   },
   "homepage": "https://github.com/derekolson/derek-o.com#readme",
-  "devDependencies": {
-    "@11ty/eleventy": "^2.0.1",
-    "@11ty/eleventy-fetch": "^4.0.1",
-    "@11ty/eleventy-img": "^4.0.2",
-    "@11ty/eleventy-navigation": "^0.3.5",
-    "@11tyrocks/eleventy-plugin-sass-lightningcss": "^1.1.0"
+  "dependencies": {
+    "@astro-community/astro-embed-vimeo": "^0.3.7",
+    "@astrojs/check": "^0.5.10",
+    "@astrojs/sitemap": "^3.1.4",
+    "astro": "^4.6.3",
+    "astro-font": "^0.0.80",
+    "sass": "^1.75.0",
+    "typescript": "^5.4.5"
   }
 }

@@ -1,0 +1,37 @@
+---
+import { getCollection } from 'astro:content';
+import ProjectLayout from '../../layouts/Layout.astro';
+import { Vimeo } from '@astro-community/astro-embed-vimeo';
+
+export async function getStaticPaths() {
+  const projects = await getCollection('projects');
+  return projects.map((entry, idx) => ({
+    params: { slug: entry.slug }, 
+    props: { 
+      entry,
+      prev: idx + 1 === projects.length
+        ? null
+        : projects[idx + 1],
+      next: idx === 0
+        ? null
+        : projects[idx - 1],
+    },
+  }));
+}
+
+const { entry, prev, next } = Astro.props;
+const { Content } = await entry.render();
+---
+<ProjectLayout title={entry.data.title}>
+  <div class="description">
+    <h2>{ entry.data.title }</h2> 
+    <h3 set:html={ entry.data.description }></h3>
+    <p class="tags"><em>{ entry.data.tags.join(", ") }</em></p>
+  </div>
+  {entry.data.vimeoId && <Vimeo id={entry.data.vimeoId} posterQuality="max" />}
+  <Content />
+  <nav class="pagination">
+    { prev && <a class="prev" href={prev?.slug}>&laquo; {prev?.data.title}</a> }
+    { next && <a class="next" href={next?.slug}>{next?.data.title} &raquo;</a> }
+  </nav>
+</ProjectLayout>

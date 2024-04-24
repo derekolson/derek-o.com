@@ -1,0 +1,19 @@
+---
+import { navLinks } from "../config";
+const currentPath = new URL(Astro.request.url).pathname;
+---
+
+<header>
+  <nav id="nav" class="container">
+    <h1 class="logo"><a href="/">Derek Olson</a></h1>
+    <ul>
+      { navLinks.map((item) => (
+        <li class="nav-item">
+          <a href={ item.url } class={currentPath === item.url ? "active" : ""} aria-current={currentPath === item.url ? "page" : undefined}>
+            { item.title }
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+</header>
