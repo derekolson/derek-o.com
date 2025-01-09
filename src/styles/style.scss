@@ -63,16 +63,9 @@ body {
 
 html,
 body {
-  font-family: $font-body;
   font-size: 20px;
   line-height: 1.6;
   font-weight: 300;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: subpixel-antialiased;
-
-  @media screen and (min-width: $screen-sm) {
-    font-size: 20px;
-  }
 
   // @media screen and (min-width:$screen-lg){
   //   font-size:18px;
@@ -164,9 +157,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $font-body;
   font-weight: 300;
-  color: #444444;
+  color: #333;
 }
 
 h1 {
@@ -196,13 +188,11 @@ header {
 header .logo {
   margin: 0;
   font-size: 0.9rem;
-  font-family: $font-heading;
-  // font-weight: 400;
-  // background: url(/img/do-logo.svg) no-repeat left;
-  // background-size: 26px 26px;
-  // padding-left: 35px;
+  background: url(../img/do-logo.svg) no-repeat left;
+  background-size: 25px 25px;
+  padding-left: 35px;
   a {
-    color: #444;
+    color: #111;
   }
 }
 
@@ -220,12 +210,11 @@ header .logo {
     margin-left: 30px;
 
     a {
-      font-family: $font-heading;
       font-size: 0.9rem;
-      color: #999;
+      color: #777;
       &:hover,
       &.active {
-        color: #444;
+        color: #111;
         border-color: transparent;
       }
       &.active {
@@ -245,7 +234,7 @@ header .logo {
   }
 
   h3 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -264,6 +253,7 @@ header .logo {
   max-width: 960px;
   margin-bottom: 50px;
   position: relative;
+  overflow: hidden;
 
   figure {
     position: relative;
@@ -279,15 +269,26 @@ header .logo {
   }
 
   a {
-    color: #000;
     transition: opacity 0.15s;
     text-decoration: none;
   }
 
+  h2 {
+    transition: all 0.2s ease;
+    transform: translateX(-26px);
+    &:before {
+      content: "→";
+      display: inline-block;
+      padding-right: 5px;
+    }
+  }
+
   &:hover {
-    h2,
     img {
       opacity: 0.5;
+    }
+    h2 {
+      transform: translateX(0);
     }
   }
 }
@@ -358,7 +359,6 @@ header .logo {
 
   font-family: $font-body;
   font-weight: 300;
-  font-size: 16px;
   text-transform: uppercase;
   text-align: center;
 }
