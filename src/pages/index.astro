@@ -15,9 +15,9 @@ const projects = await getCollectionSorted("projects");
 		<a href="/about">About →</a>
 	</div>
 	<div class="projects">
-		{ projects.toReversed().map((project) => (
-			<div class={`project ${project.slug}`}>
-				<a href={ `/${project.collection}/${project.slug}`}>
+		{ projects.map((project, idx) => (
+			<div class={`project ${project}`}>
+				<a href={ `/${project.collection}/${project.id}`}>
 					<figure style={{ backgroundColor: project.data.color }}>
 						<Image src={project.data.cover} alt={project.data.coverAlt} />
 					</figure>
