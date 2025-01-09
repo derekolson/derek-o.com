@@ -9,7 +9,7 @@ const projects = await getCollectionSorted("projects");
 
 ---
 
-<Layout title={`${site.name} | ${site.tagline}`}>
+<Layout title={site.tagline} description={site.description}>
 	<div class="description">
 		<h2>{ site.description }</h2>
 		<a href="/about">About →</a>

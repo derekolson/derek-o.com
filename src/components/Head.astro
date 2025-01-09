@@ -1,22 +1,37 @@
 ---
 import { AstroFont } from "astro-font";
+import type { ImageMetadata } from 'astro';
 import { site } from '../config';
+import logo from '../img/do-logo.svg';
 
 interface Props {
-	title: string;
+    title: string;
+    description?: string;
+    heroImage?: ImageMetadata;
 }
 
-const { title } = Astro.props;
+let { title, description, heroImage } = Astro.props
+
+description = description?.replace(/<[^>]*>/g, '').trim() || site.description;
 ---
 <head>
+  <title>{title}</title>
+
   <meta charset="UTF-8" />
   <meta name="description" content={site.description} />
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content={Astro.generator} />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content={title} />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={Astro.url} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={heroImage?.src || logo.src} />
+
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
   <link rel="sitemap" href="/sitemap-index.xml" />
-  <meta name="generator" content={Astro.generator} />
-  <title>{title}</title>
   <AstroFont
     config={[
       {
