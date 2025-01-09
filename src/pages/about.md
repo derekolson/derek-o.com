@@ -8,11 +8,11 @@ Derek Olson is a software designer and developer who thrives in the spaces betwe
 He aims to fuse art and design with electronics, code, sensors, wires, 
 and solder.
 
-Over the last twelve years, Derek has been recruited to produce work for outstanding 
-studios around Chicago. He currently works as a software design lead at 
-[IDEO](https://www.ideo.com/), helping to dream up and prototype new 
+Over the last fifteen years, Derek has been recruited to produce work for outstanding 
+studios and consultancies - most recently spending nearly a decade as a software design lead at 
+[IDEO](https://www.ideo.com/), helping dream up and prototype new 
 products and experiences for companies around the world. 
-In his downtime, he aspires to create magic by joining forces with amazing artists, 
+In his downtime, he aspires to create magic by joining forces with artists, 
 designers, and developers throughout the country.
 
 You can find Derek elsewhere on the web: 
@@ -24,4 +24,4 @@ Please feel free to reach out at <span id="obf"></span>
 
 </div>
 
-<script>document.getElementById("obf").innerHTML="<n uers=\"znvygb:uryyb@qrerx-b.pbz\">uryyb@qrerx-b.pbz</n>".replace(/[a-zA-Z]/g,function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);});</script>
+<script>document.getElementById("obf").innerHTML=atob("PmEvPG1vYy5vLWtlcmVkQG9sbGVoPiJtb2Muby1rZXJlZEBvbGxlaDpvdGxpYW0iPWZlcmggYTw=").split("").reverse().join("");</script>

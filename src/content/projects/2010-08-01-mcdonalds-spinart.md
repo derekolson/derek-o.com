@@ -2,6 +2,7 @@
 title: McDonald's Spinart
 slug: mcdonalds-spinart
 cover: ../../img/projects/spinart4.jpg
+coverAlt: Multi-color McDonalds spin art tie-die variation
 color: "#eee"
 description: >
   A physics-based paint engine built to promote a new line of McCafe fruit smoothies. A custom rendering engine allowed users to add as much paint as they desired, without sacrificing performance.

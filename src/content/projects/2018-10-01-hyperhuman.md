@@ -2,6 +2,7 @@
 title: Hyperhuman
 slug: hyperhuman
 cover: ../../img/projects/hyperhuman-hero.jpg
+coverAlt: A user placing their preferences onto the belief checkout
 color: "#fcdd2b"
 link: https://www.ideo.com/blog/what-the-ai-products-of-tomorrow-might-look-like
 description: >
@@ -14,4 +15,4 @@ tags:
 
 ![A user placing their preferences onto the belief checkout](../../img/projects/hyperhuman-hero.jpg)
 
-![A user placing their preferences onto the belief checkout](../../img/projects/hyperhuman-2.png)
+![A user selecting their preferences for the belief checkout](../../img/projects/hyperhuman-2.png)
