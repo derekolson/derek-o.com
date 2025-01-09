@@ -19,7 +19,7 @@ const projects = await getCollectionSorted("projects");
 			<div class={`project ${project}`}>
 				<a href={ `/${project.collection}/${project.id}`}>
 					<figure style={{ backgroundColor: project.data.color }}>
-						<Image src={project.data.cover} alt={project.data.coverAlt} />
+						<Image src={project.data.cover} widths={[540, 720, project.data.cover.width]} alt={project.data.coverAlt} loading={idx < 2 ? 'eager' : 'lazy'} />
 					</figure>
 					<h2>{ project.data.title }</h2>
 				</a>
