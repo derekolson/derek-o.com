@@ -2,7 +2,7 @@
 import { render } from 'astro:content';
 import ProjectLayout from '../../layouts/Layout.astro';
 import { Vimeo } from '@astro-community/astro-embed-vimeo';
-import { getCollectionSorted } from "../../lib/utils";
+import { getCollectionSorted, getCollectionLink } from "../../lib/utils";
 
 export async function getStaticPaths() {
   const projects = await getCollectionSorted("projects");
@@ -32,7 +32,7 @@ const { Content } = await render(entry);
   {entry.data.vimeoId && <Vimeo id={entry.data.vimeoId} posterQuality="max" />}
   <Content />
   <nav class="pagination">
-    { prev && <a class="prev" href={`/${prev?.collection}/${prev?.id}`}>&laquo; {prev?.data.title}</a> }
-    { next && <a class="next" href={`/${next?.collection}/${next?.id}`}>{next?.data.title} &raquo;</a> }
+    { prev && <a class="prev" href={getCollectionLink(prev)}>&laquo; {prev?.data.title}</a> }
+    { next && <a class="next" href={getCollectionLink(next)}>{next?.data.title} &raquo;</a> }
   </nav>
 </ProjectLayout>

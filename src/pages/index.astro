@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import { site } from '../config';
 
 import { Image } from "astro:assets";
-import { getCollectionSorted } from "../lib/utils";
+import { getCollectionSorted, getCollectionLink } from "../lib/utils";
 
 const projects = await getCollectionSorted("projects");
 
@@ -17,7 +17,7 @@ const projects = await getCollectionSorted("projects");
 	<div class="projects">
 		{ projects.map((project, idx) => (
 			<div class={`project ${project}`}>
-				<a href={ `/${project.collection}/${project.id}`}>
+				<a href={getCollectionLink(project)}>
 					<figure style={{ backgroundColor: project.data.color }}>
 						<Image src={project.data.cover} widths={[540, 720, project.data.cover.width]} alt={project.data.coverAlt} loading={idx < 2 ? 'eager' : 'lazy'} />
 					</figure>
