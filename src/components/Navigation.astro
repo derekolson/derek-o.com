@@ -1,6 +1,6 @@
 ---
 import { navLinks } from "../config";
-const currentPath = new URL(Astro.request.url).pathname;
+const { pathname } = Astro.url
 ---
 
 <header>
@@ -9,7 +9,7 @@ const currentPath = new URL(Astro.request.url).pathname;
     <ul>
       { navLinks.map((item) => (
         <li class="nav-item">
-          <a href={ item.url } class={currentPath === item.url ? "active" : ""} aria-current={currentPath === item.url ? "page" : undefined}>
+          <a href={ item.url } class={pathname === item.url ? "active" : ""} aria-current={pathname === item.url ? "page" : undefined}>
             { item.title }
           </a>
         </li>
